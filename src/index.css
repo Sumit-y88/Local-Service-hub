@@ -1,0 +1,17 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+
+/* Define the movement */
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
