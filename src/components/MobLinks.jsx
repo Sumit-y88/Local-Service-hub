@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const MobLinks = ({closeMenu}) => {
     const navlinks = [
@@ -7,7 +8,9 @@ const MobLinks = ({closeMenu}) => {
         { text: "Services", link: "#services" },
         { text: "Contact", link: "#contact" },
     ];
+    const navigate = useNavigate();
     return (
+     
         <>
             <div className=" flex flex-col mt-5 items-center justify-center gap-8 w-full">
                 {navlinks.map((item, idx) => (
@@ -34,7 +37,7 @@ const MobLinks = ({closeMenu}) => {
 
             </div>
             <div className='flex items-center justify-center mt-3  p-2'>
-                <button className='bg-blue-600 text-gray-200 px-4 py-2 hover:bg-blue-700 transition-colors duration-300 ease-in-out hover:text-white rounded-xl text-lg'>Find Services</button>
+                <button onClick={()=> navigate("/search")} className='bg-blue-600 text-gray-200 px-4 py-2 hover:bg-blue-700 transition-colors duration-300 ease-in-out hover:text-white rounded-xl text-lg'>Find Services</button>
             </div>
 
         </>
